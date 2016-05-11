@@ -1,0 +1,554 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>林国民·LinGM</title>
+      <!--my style-->
+      <style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul,li{
+			list-style: none;
+		}
+		.center{
+			width: 80%;
+			margin: 0 auto;
+		}
+		.left{
+			float: left;
+		}
+		.clr{
+			clear: both;
+		}
+		
+		/*top nav style*/
+		#topNav{
+			width: 100%;
+			height: 80px;
+			line-height: 80px;
+			border-top: 2px solid rgb(204,0,0);
+		}
+		#logo{
+			padding-top: 15px;
+			margin-left: 12.5%;
+			display: inline-block;
+		}
+		#navbar{
+			position: absolute;
+			font-family: "微软雅黑";
+			left: 34%;
+		}
+		#topNav li,#topNav ul{
+			float:left;
+			display: inline-block;
+		}
+		#navbar li{
+			padding: 0 15px;
+			text-align: center;
+		}
+		.active{
+			color: #fff;
+			background-color: rgb(204,0,0);
+		}
+		/*top nav end*/
+		
+		/*thumbnail style*/
+		#thumbnail{
+			/*height: 341px;*/
+			overflow: hidden;
+			position: relative;
+		}
+		#thumbnail img{
+			width: 50%;
+			float: left;
+		}
+		#thumbWord{
+			position: absolute;
+			top:40%;
+			left:0;
+			width: 100%;
+			text-align: center;
+			color: rgb(243,239,237);
+			font-size: 24px;
+			font-weight: Light;
+			font-family: "微软雅黑";			
+		}
+		#point{
+			position: absolute;
+			top:90%;
+			left:0%;	
+			width: 100%;
+			text-align: center;		
+		}
+		#point b{
+			width: 12px;
+			height: 12px;
+			background-color: rgb(191,184,182);
+			border-radius: 50%;
+			display: inline-block;
+		}
+		#point b:nth-child(2){
+			margin: 0 5px;
+		}
+		#point b:nth-child(3){
+			background-color: rgb(204,0,0);
+		}
+		/*thumbnail end*/
+		
+		/*four logo style*/
+		#serve{
+			height: 353.4px;
+		}
+		#serveWord{
+			text-align: center;
+			font-size: 30px;
+			font-weight: bold;
+			font-family: "微软雅黑";
+			margin-top: 1%;
+			color: rgb(61,61,61);
+		}
+		#serveWord span{
+			color: rgb(198,39,26);
+			font-size: 18px;
+		}
+
+		#logoClassfiy{
+			margin: 0 10%;
+			height: 260px;
+		}
+		.imgContain{
+			width:45%;
+			margin-top: 30px;
+			margin-left: 5%;
+		}
+		.imgBox{
+			width: 96px;
+			height: 96px;
+			border: 2px solid #000;
+			border-radius: 50%;
+		}
+		.imgActive{
+			border: 2px solid rgb(198,39,26);
+		}
+		.imgWord{
+			width: 300px;
+			margin-top: 25px;
+			margin-left: 20px;
+			font-size: 12px;
+			line-height: 20px;
+			font-weight: Regular;
+		}
+		.imgWordActive{
+			color: rgb(198,39,26);
+		}
+		.imgWord span{
+			font-size: 16px;
+		}
+		.imgBox .container{
+			margin-top: 17px;
+			margin-left: 18px;
+		}
+		/*four logo end*/
+
+		/*example style*/
+		#example{
+			background-color: rgb(240,242,244);
+		}
+		#titleWord{
+			text-align: center;
+			font-size: 30px;
+			font-weight: light;
+			font-family: "微软雅黑";
+			padding-top: 20px;
+			color: rgb(61,61,61);			
+		}
+		#titleWord span{
+			font-weight: light;
+			font-size: 14px;
+			margin-top: 1%;
+			color: rgb(115,116,116);
+			text-align: center;	
+			display: block;
+		}
+		#titleWord span b{
+			display: inline-block;
+			margin: 5px;
+		}
+		#thumbnailContain{
+			padding-top: 40px;
+			margin: 0 15%;
+			height: 235px;
+		}
+		#thumbnailContain .left{
+			width: 21%;
+			text-align: center;
+		}
+		#thumbnailContain .left:nth-child(1),
+		#thumbnailContain .left:nth-child(2),
+		#thumbnailContain .left:nth-child(3){
+			margin-right: 1%;
+		}
+		#thumbnailContain .left img{
+			width: 100%;
+			height: 178px;
+		}
+		#thumbnailContain span{
+			font-size: 14px;
+			font-weight: light;
+			font-family: "微软雅黑";
+			color: rgb(110,111,111);
+			margin-top: 16px;
+			display: inline-block;
+		}
+		#thumbnailContain + .clr{
+			text-align: center;
+			margin: 0 auto;
+			width: 50%;
+		}
+		#thumbnailContain + .clr b{
+			display: inline-block;
+			width:21px;
+			height: 21px; 
+			margin-right: 8px;
+		}
+		#thumbnailContain + .clr b:nth-child(1){
+			background: rgb(37,37,39) url("images/logo/img.png") 5px -16px;
+		}		
+		#thumbnailContain + .clr b:nth-child(2){
+			background: rgb(37,37,39) url("images/logo/img.png") 5px 3px;
+		}
+
+		#news{
+			margin: 0 15%;
+			padding-top: 70px;
+		}
+		#news span{
+			font-size: 24px;
+			font-weight: Regular;
+			font-family: "微软雅黑";
+			color: rgb(51,52,52);	
+			display:inline-block;
+		}
+		#news a{
+			font-size: 14px;
+			font-weight: Regular;
+			font-family: "微软雅黑";
+			color: rgb(116,116,116);	
+			text-decoration: none;
+		}
+		#newsWord{
+			margin: 0 15%;
+			height: 255px;
+		}
+		#newsWord #newsWordLeft span{
+			font-weight: Regular;
+			font-family: "微软雅黑";			
+		}
+		#newsWord .news14px{
+			font-size: 14px;
+			color: rgb(51,51,51);	
+		}
+		#newsWord .news12px{
+			font-size: 12px;
+			color: rgb(102,102,102);
+		}
+		#newsWordLeft dl{
+			margin-top: 32px;
+		}
+		#newsWordLeft dl dt{
+			margin-bottom: 5px;
+		}
+		#newsWordRight{
+			margin-top: 32px;
+			font-size: 12px;
+			font-weight: Regular;
+			font-family: "微软雅黑";	
+			color: rgb(70,70,70);
+			border-left: 2px solid rgb(171,171,171);
+			padding-left: 20px;
+			margin-left: 35px;
+		}
+		#newsWordRight span{
+			display: inline-block;
+			margin-bottom: 10px;
+		}
+		#newsWordRight span:nth-child(7){
+			font-size: 24px;
+			font-weight: Light;
+			font-family: "微软雅黑";	
+			margin-top: 10px;	
+		}
+		#newsWordRight span:nth-child(7) span{
+			color: rgb(223,83,84);
+		}
+		#leaveMsg{
+			width: 123px;
+			height: 43px;
+			background: rgb(105,186,7);
+			border-radius: 6%;
+			cursor: pointer;
+			margin-top: 10px;
+		}
+		#leaveMsg b{
+			width: 22px;
+			height: 20px;
+			display: inline-block;
+			margin: 8px 0 0 10px;
+			background: url("images/logo/img.png") 0 -130px;
+		}
+		#newsWordRight #leaveMsg span{
+			margin: 0  0 0 10px;
+			font-size: 16px;
+			font-weight: Regular;
+			font-family: "微软雅黑";	
+			color: rgb(240,242,244);			
+		}
+		/*example end*/
+
+		/*footer style*/
+		#footer{
+			background: rgb(34,34,34);
+			height: 250px;
+		}
+		#footerContain{
+			margin: 0 15%;
+			height: 220px;
+		}
+		#footerContain ul{
+			margin-top: 36px;
+			margin-right: 10%;
+		}
+		#footerContain ul:nth-child(5){
+			margin-right: 0;
+			margin-top: 30px;
+		}
+		#footerContain ul:nth-child(5) li:nth-child(1){
+			color: rgb(221,0,0);
+		}
+		#footerContain ul:nth-child(5) b{
+			width: 15px;
+			height: 16px;
+			display: inline-block;
+			margin-right: 5px;
+			background-image: url("images/logo/img.png");
+		}
+		#footerContain img{
+			margin: 10% 10%;
+			display:inline-block;
+		}
+		#footerContain ul li{
+			font-size: 12px;
+			font-weight: Regular;
+			font-family: "微软雅黑";	
+			color: rgb(212,212,212);
+			margin-bottom: 10px;				
+		}
+		#footerContain ul li:nth-child(1){
+			font-size: 16px;
+			font-weight: Regular;
+			font-family: "微软雅黑";	
+			color: rgb(212,212,212);
+			margin-bottom: 20px;			
+		}
+
+		#footerWord{
+			width: 100%;
+			background: rgb(16,16,16);
+			color: rgb(102,102,102);
+			font-size: 12px;
+			font-weight: Light;
+			font-family: "微软雅黑";	
+			height: 44px;
+			line-height: 44px;		
+		}
+		#footerRightWord{
+			width: 80%;
+			margin: 0 auto;
+			text-align: center;
+		}
+		/*footer end*/
+      </style>
+  </head>
+  <body>
+	<!--top nav start-->
+	<div id="topNav">
+		<div id="logo"><img src="images/logo/mainlogo.png" alt="logo" /></div>
+		<ul id="navbar">
+			<li class="active">首页</li>
+			<li>走进我们</li>
+			<li>服务产品</li>
+			<li>项目演示</li>
+			<li>新闻动态</li>
+			<li>企业文化</li>
+			<li>联系我们</li>
+		</ul>
+	</div>
+	<!--top nav end-->
+	
+	<!--thumbnail start-->
+	<div id="thumbnail">
+		<img src="images/thumbnail/redcup.jpg" alt="redcup" />
+		<img src="images/thumbnail/whitegloves.jpg" alt="redcup" />
+		<div id="thumbWord">专心关注您的生活与工作，把繁杂的事情交给我们！</div>
+		<div id="point"><b></b><b></b><b></b></div>
+	</div>
+	<!--thumbnail end-->
+	
+	<!--four logo start-->
+	<div id="serve">
+		<div id="serveWord" class="center">
+			<span>xxxx</span><br />
+			中国商业物业专业服务商
+		</div><!--四个图标上面的文字-->
+
+		<div id="logoClassfiy" class="center">
+			<div class="left imgContain">
+				<div class="imgBox left imgActive">
+					<div class="container"><img src="images/logo/business.png" alt=""></div>
+				</div><!--文字前的图标-->
+				<div class="left imgWord imgWordActive">
+					<span>商业物业</span><br />
+					公司实施专业的保安、保洁、绿化和工程维护保养管理服务，有全委管理、单项管理、品牌输出管理
+				</div>
+			</div>
+			<div class="left imgContain">
+				<div class="imgBox left">
+					<div class="container"><img src="images/logo/public.png" alt=""></div>
+				</div><!--文字前的图标-->
+				<div class="left imgWord">
+					<span>公众物业</span><br />
+					公司实施专业的保安、保洁、绿化和工程维护保养管理服务，有全委管理、单项管理、品牌输出管理
+				</div>
+			</div>
+			<div class="left imgContain">
+				<div class="imgBox left">
+					<div class="container" style="margin-left: 22px;"><img src="images/logo/work.png" alt=""></div>
+				</div><!--文字前的图标-->
+				<div class="left imgWord">
+					<span>办公楼物业</span><br />
+					公司实施专业的保安、保洁、绿化和工程维护保养管理服务，有全委管理、单项管理、品牌输出管理
+				</div>
+			</div>
+			<div class="left imgContain">
+				<div class="imgBox left">
+					<div class="container"><img src="images/logo/livehouse.png" alt=""></div>
+				</div><!--文字前的图标-->	
+				<div class="left imgWord">
+					<span>住宅物业</span><br />
+					公司实施专业的保安、保洁、绿化和工程维护保养管理服务，有全委管理、单项管理、品牌输出管理
+				</div>			
+			</div>
+		</div><!--四个图标以及文字-->
+	</div>
+	<!--four logo end-->
+
+	<!--example start-->
+	<div id="example">
+		<div id="titleWord" class="center">
+			我们的项目案例
+			<span>商业<b>/</b>办公<b>/</b>公共<b>/</b>住宅</span>
+		</div><!--四张缩略图上面的文字-->
+		<div id="thumbnailContain" class="center">
+			<div class="left">
+				<img src="images/thumbnail/shanghai.jpg" alt=""><br /><span>上海世博会&nbsp;世界气象管</span>
+			</div>
+			<div class="left">
+				<img src="images/thumbnail/health.jpg" alt=""><br /><span>中国生殖健康保健培训中心 </span>
+			</div>
+			<div class="left">
+				<img src="images/thumbnail/bank.jpg" alt=""><br /><span>国家开发银行福建省分行 </span>
+			</div>
+			<div class="left">
+				<img src="images/thumbnail/bank.jpg" alt=""><br /><span>国家开发银行福建省分行 </span>
+			</div>
+		</div><!--四张缩略图-->
+		<div class="clr">
+			<b></b>
+			<b></b>
+		</div><!--缩略图下面的两个按钮图标-->
+		<div id="news">
+			<span>新闻动态</span> <a href="###">全部>></a>
+		</div><!--缩略图下面的新闻动态标题-->
+		<div id="newsWord">
+			<div id="newsWordLeft" class="left">
+				<dl>
+					<dt>
+					<span class="news14px">[2014-10-16]关于开展2014年上海市物业管理企业诚信承诺申报的通知</span><br />
+					</dt>
+					<dd>
+						<span class="news12px">诚信承诺企业有效期到期的必须参加本次申报，如条件不符合申报上一等级诚信承诺企业的，可以...</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+					<span class="news14px">[2014-10-9]小区地上部分与地下车库可否由两家物业管理之案例分析</span><br />
+					</dt>
+					<dd>
+						<span class="news12px">某物业公司为某小区的前期物业管理单位，小区业主委员会成立后，另聘其他物业公司管理该小区...</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+					<span class="news14px">[2014-9-12]关于表彰上海市物业管理行业“金点子”创新成果项目的通知</span><br />
+					</dt>
+					<dd>
+						<span class="news12px">为提高物业服务企业的自主创新能力和管理服务水平，激发员工的岗位创新、创效意识的热情...</span>
+					</dd>
+				</dl>				
+			</div><!--新闻动态左边文字-->
+			<!--<div id="newsWordLine" class="left"></div>新闻动态中间的分割线-->
+			<div id="newsWordRight" class="left">
+				<span>多年来，服务超过2000家客户</span><br /> 
+				<span>专业，诚信，高效的管理设计能力与执行能力</span><br /> 
+				<span>持续驱动百联物业管理的快速成长，实现与开发商/业主共赢的目标</span><br />
+				<span>我们是<span>中国商业物业专业服务商</span></span>
+				<div id="leaveMsg"><b></b><span>给我留言</span></div>
+			</div><!--新闻动态右边文字-->
+		</div><!--新闻动态文字-->
+	</div>
+	<!--example end-->
+
+	<!--footer start-->
+	<div id="footer">
+		<div id="footerContain">
+			<ul class="left">
+				<li>项目</li>
+				<li>商业物业</li>
+				<li>办公楼物业</li>
+				<li>公众物业</li>
+				<li>住宅物业</li>
+			</ul>
+			<ul class="left">
+				<li>服务</li>
+				<li>基础服务</li>
+				<li>服务类型</li>
+				<li>市场细分</li>
+				<li>特色服务</li>
+			</ul>
+			<img src="images/logo/mainlogo.png" alt="" class="left">
+			<ul class="left">
+				<li>友情链接</li>
+				<li>中国物业管理行业协会</li>
+				<li>上海市物业行业协会</li>
+				<li>百联集团</li>
+				<li>百联股份</li>
+			</ul>
+			<ul class="left">
+				<li>联系我们</li>
+				<li><b style="background-position: 0 -40px;"></b>电话:021-63523124</li>
+				<li><b style="background-position: 0 -65px;"></b>传真:021-63220872</li>
+				<li><b style="background-position: 0 -89px;"></b>地址:xxx路xx号3楼</li>
+				<li><b style="background-position: 0 -113px;"></b>留言:咨询与意见反馈</li>
+			</ul>
+		</div>
+		<div id="footerWord" class="clr">
+			<div id="footerRightWord">
+				Copyright © 2004 - 2014 XXXXXXX管理有限公司  All Right Reserved.沪ICP05027423号
+			</div>
+		</div>
+	</div>
+	<!--footer end-->
+  </body>
+</html>
